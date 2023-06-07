@@ -4,6 +4,7 @@ import {useState} from 'react'
 import {motion, useCycle} from 'framer-motion'
 import Section from '../components/portfolio-pg/Section.jsx';
 import MenuToggle from '../components/portfolio-pg/menutoggle.jsx';
+import Particles from '../components/portfolio-pg/Particles.jsx';
 
 
 
@@ -18,34 +19,34 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex min-h-screen max-w-[1080px] mx-[auto] bg-gray-700 flex-col items-center justify-between p-24">
-        <Section element='section'  className="md:bg-black md:px-10 lg:px-20 h-[65px]  z-10 absolute top-0 w-full" spanClassName="w-full flex justify-between h-full flex-wrap md:flex-nowrap">
-          <div className='h-full aspect-[2/1] p-4 flex flex-row items-center cursor-pointer'>
+      <main onScroll={console.log("ghghjg")} className="flex min-h-screen max-w-[1080px] mx-[auto] flex-col items-center justify-between">
+        <div className="w-full absolute top-0 h-screen max-md:min-h-[120vw] md:min-h-[45vw] max-md:bg-[url(/portfolio-pg/nametxt.svg)] bg-no-repeat bg-center bg-contain bg-black" ><div className='w-full h-full '><Particles /></div><div className='max-md:hidden w-1/3 h-1/4 absolute bottom-[10px] right-[10px] bg-[url(/portfolio-pg/nametxt.svg)] bg-no-repeat bg-center bg-contain'></div></div>
+        <Section element='section'  className="md:px-10 lg:px-20 h-[65px]  z-10 absolute top-0 w-full border-b border-[rgba(100,100,100,0.2)] bg-[rgba(0,0,0,0.4)]" spanClassName="w-full flex justify-between h-full flex-wrap md:flex-nowrap">
+          <div className='h-full aspect-[2/1] p-2 flex flex-row items-center cursor-pointer'>
             <img className=" w-full object-cover" src="/portfolio-pg/profile.png" />
           </div>
           <motion.div animate={isOpen ? "open" : "closed"} className={`md:hidden aspect-square w-max border-yellow-400 font-black h-full flex`}>
             <MenuToggle toggle={() => toggleOpen()} />
           </motion.div>
-          <div className={`md:[position:unset] md:border-0 md:[display:unset] h-full absolute top-10 right-0 max-md:m-3 p-3 bg-[#000] md:[background:none] rounded-md  text-right border-[1px] border-[rgba(90,90,90,.9)] max-md:transition-all duration-700 ease-linear ${isOpen ? 'max-md:opacity-90 max-md:scale-100' : 'max-md:opacity-0 max-md:scale-0'}`  }>
+          <div className={`md:[position:unset] md:border-0 md:[display:unset] md:h-full absolute top-10 right-0 max-md:m-3 p-3 bg-[#000] md:[background:none] rounded-md  text-right border-[1px] border-[rgba(90,90,90,.9)] max-md:transition-all duration-700 ease-linear ${isOpen ? 'max-md:opacity-90 max-md:scale-100' : 'max-md:opacity-0 max-md:scale-0'}`  }>
             <ul className="flex flex-col md:flex-row h-full">
-              <a className='flex items-center justify-around h-full'><li className="md:flex md:items-center text-sm leading-normal text-[#888] hover:text-white rounded-lg mx-[3px] font-light cursor-pointer h-[30px] px-4 max-sm:rounded-md max-sm:px-2">Home</li></a>
-              <a className='flex items-center justify-around h-full'><li className="md:flex md:items-center text-sm leading-normal text-[#888] hover:text-white rounded-lg mx-[3px] font-light cursor-pointer h-[30px] px-4 max-sm:rounded-md max-sm:px-2">Services</li></a>
-              <a className='flex items-center justify-around h-full'><li className="md:flex md:items-center text-sm leading-normal text-[#888] hover:text-white rounded-lg mx-[3px] font-light cursor-pointer h-[30px] px-4 max-sm:rounded-md max-sm:px-2">About</li></a>
-              <a className='flex items-center justify-around h-full'><li className="md:flex md:items-center text-sm leading-normal text-[#888] hover:text-white rounded-lg mx-[3px] font-light cursor-pointer h-[30px] px-4 max-sm:rounded-md max-sm:px-2">Contact</li></a>
-              <a className='max-md:hidden buttonreset md:flex md:items-center md:justify-around md:h-full' href='/yoga.pdf'><button type='button' className="text-md leading-normal text-gray-300 rounded-lg mx-[3px] font-sm font-semibold bg-black rounded-full  w-max h-[30px] px-3 border-[#333] hover:border-[#fafafa] border-[1px]">Download CV</button></a>
+              <a className='flex items-center justify-around h-full'><li className="md:flex md:items-center text-sm leading-normal md:text-[#888] hover:text-white rounded-lg mx-[3px] font-light cursor-pointer h-[30px] px-4 max-sm:rounded-md max-sm:px-2">Home</li></a>
+              <a className='flex items-center justify-around h-full'><li className="md:flex md:items-center text-sm leading-normal md:text-[#888] hover:text-white rounded-lg mx-[3px] font-light cursor-pointer h-[30px] px-4 max-sm:rounded-md max-sm:px-2">Services</li></a>
+              <a className='flex items-center justify-around h-full'><li className="md:flex md:items-center text-sm leading-normal md:text-[#888] hover:text-white rounded-lg mx-[3px] font-light cursor-pointer h-[30px] px-4 max-sm:rounded-md max-sm:px-2">About</li></a>
+              <a className='flex items-center justify-around h-full'><li className="md:flex md:items-center text-sm leading-normal md:text-[#888] hover:text-white rounded-lg mx-[3px] font-light cursor-pointer h-[30px] px-4 max-sm:rounded-md max-sm:px-2">Contact</li></a>
+              <a className='max-md:hidden buttonreset md:flex md:items-center md:justify-around md:h-full' href='/yoga.pdf'><button type='button' className=" shadowd1 text-md leading-normal text-black rounded-full mx-[3px] font-sm font-semibold  w-max h-[30px] px-3">Download CV</button></a>
             </ul>
           </div>
         </Section>
-        <div className="px-4 md:px-12 lg:px-24 w-full h-screen bg-cover max-md:min-h-[120vw] md:min-h-[50vw] bg-no-repeat bg-center pt-12 md:pt-20 md:flex flex-row h-full">
-          <Section element="div" className="max-md:h-[27%] my-10 md:pb-10 md:basis-1/2 md:my-[auto] flex flex-col justify-center" spanClassName="flex flex-col justify-center" >
-            <h1 className="md:text-[max(48px,min(5vw,76px))] mb-3 leading-none font-black">Hi I am <span className="text-[#aca6ff] ">Muhammad Asadullah</span></h1>
-            <h1 className="mt-3 md:text-[max(48px,min(5vw,76px))] leading-none font-black">I am Full Stack Web Developer.</h1>
+        <div className="px-4 md:px-8 w-full h-screen bg-cover max-md:min-h-[120vw] md:min-h-[45vw] bg-no-repeat bg-center md:flex flex-row h-full relative">
+          <Section element="div" className="max-md:h-[40%] max-md:mt-[50px] md:basis-1/2 flex flex-col justify-center" spanClassName="flex flex-col justify-center" >
+            <h1 className="mt-3 lg:text-[70px] md:text-[60px] text-[40px] max-md:text-center leading-tight font-black">I am <span className='textclip2 transition-colors duration-1000'> Full Stack </span> <span className='textclip3 transition-colors duration-1000'>Developer</span></h1>
           </Section>
           <div className="//bg-[url('/portfolio/herobackground/profile.svg')] bg-contain bg-no-repeat bg-center max-md:h-[40%]  md:h-full md:basis-1/2 flex items-center relative" >
             <div className="md:w-full md:aspect-square max-md:w-screen max-md:h-full mx-[auto] ">
             </div>
           </div>
-          <div className="text-center md:hidden " ><a href='/yoga.pdf'><button className="bg-[#030284] aspect-[7/2] px-2 rounded-full m-5 border-[1px] w-max border-sky-400 font-bold hover:bg-[rgb(37,99,235)]">DOWNLOAD CV</button></a></div>
+          <div className="text-center md:hidden " ><a href='/yoga.pdf'><button type='button' className="shadowd1 text-md leading-normal text-black mx-[3px] font-sm font-semibold rounded-full  w-max h-[36px] px-3">Download CV</button></a></div>
         </div>
         <Section element="section"  className="px-4 md:px-12 lg:px-24 py-10">
           <h2 className='text-3xl font-black tracking-tight text-white sm:text-4xl'>Overview</h2>

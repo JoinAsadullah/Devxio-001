@@ -1,4 +1,4 @@
-import { motion, useInView, useCycle  } from "framer-motion";
+import {useInView} from "framer-motion";
 import {useRef} from 'react';
 
 export default function Section(props) {
