@@ -51,6 +51,47 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.anim1{
+  animation: opacity1 7000ms ease-in-out 0ms 100;
+}
+.anim2{
+  animation: opacity2 7000ms ease-in-out 0ms 100;
+}
+@keyframes opacity1 {
+  0%{
+    opacity: 100;
+  }
+  20%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 100;
+  }
+  100%{
+    opacity: 100;
+  }
+}
+@keyframes opacity2 {
+  0%{
+    opacity: 0;
+  }
+  20%{
+    opacity: 100;
+  }
+  50%{
+    opacity: 100;
+  }
+  80%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
 body{
   background-color: #000000;
   opacity: 1;
