@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className='[color-scheme:dark]'>
+    <html lang="en" className='[color-scheme:dark] scroll-smooth'>
       <body className={`${inter.className} relative`}>{children}</body>
     </html>
   )

@@ -6,7 +6,8 @@
 	"extensionsUsed":[
 		"KHR_draco_mesh_compression",
 		"KHR_materials_specular",
-		"KHR_materials_ior"
+		"KHR_materials_ior",
+		"KHR_materials_clearcoat"
 	],
 	"extensionsRequired":[
 		"KHR_draco_mesh_compression"
@@ -415,17 +416,36 @@
 		{
 			"doubleSided":true,
 			"emissiveFactor":[
-				1,
-				1,
-				1
+				0.5000001788139343,
+				0.5000001788139343,
+				0.5000001788139343
 			],
+			"emissiveTexture":{
+				"index":0
+			},
+			"extensions":{
+				"KHR_materials_clearcoat":{
+					"clearcoatFactor":0.48363634943962097,
+					"clearcoatRoughnessFactor":0.029999999329447746
+				},
+				"KHR_materials_specular":{
+					"specularColorFactor":[
+						0.39235187539147093,
+						0.39235187539147093,
+						0.39235187539147093
+					]
+				},
+				"KHR_materials_ior":{
+					"ior":1.4500000476837158
+				}
+			},
 			"name":"screen",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
-					"index":0
+					"index":1
 				},
 				"metallicFactor":0,
-				"roughnessFactor":0.4000000059604645
+				"roughnessFactor":0.3563636541366577
 			}
 		},
 		{
@@ -971,6 +991,10 @@
 		}
 	],
 	"textures":[
+		{
+			"sampler":0,
+			"source":0
+		},
 		{
 			"sampler":0,
 			"source":0

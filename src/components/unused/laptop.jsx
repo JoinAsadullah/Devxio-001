@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { Canvas} from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF, useAnimations } from "@react-three/drei";
+import { OrbitControls, Preload, useGLTF, useAnimations, Environment } from "@react-three/drei";
 import { Suspense , useRef, useEffect, useState } from "react";
 
 
@@ -57,21 +57,17 @@ useGLTF.preload('portfolio-pg/laptop.gltf')
 export default function Laptop() {
 
   return (
-    <Canvas flat  camera= {{position: [0, 0.2, 2.5] , fov:30}} >
-      <directionalLight intensity={1} position={[0, 90, 5]} />
-      <directionalLight intensity={1} position={[10, -5, -5]} />
-      <directionalLight intensity={1} position={[-20, -10, 5]} />
-      <directionalLight intensity={1} position={[20, -10, 5]} />
+    <Canvas flat camera={{ position: [0, 0.2, 2.5], fov: 30 }} >
+      <ambientLight intensity={5} />
       <Suspense fallback={null}>
-        <ambientLight intensity={2} />
         <Model />
-        <OrbitControls enableZoom={false} enablePan={false} autoRotate/>
+        <OrbitControls enableZoom={false} enablePan={false} autoRotate />
       </Suspense>
       <Preload all />
     </Canvas>
   );
 }
-      // <pointLight position={[0, -3.25, -1.5]} />
-      // <pointLight position={[0, 3.25, 1.5]} />
-      // <pointLight position={[10, 1, 0]} />
-      // <pointLight position={[0, 45, 1]} />
+    // <pointLight position={[0, -3.25, -1.5]} />
+    // <pointLight position={[0, 3.25, 1.5]} />
+    // <pointLight position={[10, 1, 0]} />
+    // <pointLight position={[0, 45, 1]} />

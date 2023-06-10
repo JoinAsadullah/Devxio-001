@@ -30,7 +30,7 @@ body {
 }
 
 .shadowd1{
-  box-shadow:  3px 3px 8px #2f44bb,
+  -box-shadow:  3px 3px 8px #2f44bb,
   -3px -3px 8px #0d1756;
   background: linear-gradient(145deg, #9a91fb, #6854fb);
   transition: box-shadow 0.05s ease-in-out;
@@ -52,10 +52,10 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .anim1{
-  animation: opacity1 7000ms ease-in-out 0ms 100;
+  animation: opacity1 7000ms ease-in-out 0ms infinite;
 }
 .anim2{
-  animation: opacity2 7000ms ease-in-out 0ms 100;
+  animation: opacity2 7000ms ease-in-out 0ms infinite;
 }
 @keyframes opacity1 {
   0%{
