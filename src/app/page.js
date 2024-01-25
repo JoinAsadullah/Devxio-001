@@ -10,11 +10,6 @@ import Particles from '../components/portfolio-pg/Particles.jsx';
 
 
 
-export const metadata = {
-  title: 'Asadullah Portfolio',
-  description: 'Muhammad Asadullah Full Stack Developer Portfolio',
-  viewport: 'width=device-width, initial-scale=1.0',
-};
 export default function Home() {
   const componentRef = useRef(null);
   const [isOpen, toggleOpen] = useCycle(false, true);
